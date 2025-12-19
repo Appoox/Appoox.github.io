@@ -84,26 +84,58 @@
         }
 
         section {
-            min-height: 100vh;
-            padding: 6rem 2rem 4rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            opacity: 0;
-            animation: fadeIn 1s forwards;
+        /* Reduced from 100vh to allow sections to sit closer together */
+        min-height: auto; 
+        /* Reduced padding top/bottom from 6rem/4rem to 3rem/2rem */
+        padding: 3rem 2rem 2rem; 
+        max-width: 1200px;
+        margin: 0 auto;
+        opacity: 0;
+        animation: fadeIn 1s forwards;
+        }
+
+        h2 {
+        font-size: 2.2rem;
+        /* Reduced margin from 3rem to 1.5rem */
+        margin-bottom: 1.5rem; 
+        text-align: center;
+        position: relative;
+        padding-bottom: 0.8rem;
+        }
+
+        .hero {
+        /* Hero still benefits from some height, but slightly reduced */
+        min-height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        gap: 1.5rem;
+        }
+
+        .about-content, .education-item, .skill-category, .project-card, .experience-card {
+        /* Reduced bottom margins on containers */
+        margin-bottom: 1rem;
+        }
+
+        .info-grid, .skills-grid, .experience-grid {
+        /* Tightened gap between grid items */
+        gap: 1rem;
         }
 
         @keyframes fadeIn {
             to { opacity: 1; }
         }
 
-        .hero {
+        /* .hero {
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             flex-direction: column;
             gap: 2rem;
-        }
+        } */
 
         .profile-img {
             width: 200px;
@@ -181,13 +213,13 @@
             color: white;
         }
 
-        h2 {
+        /* h2 {
             font-size: 2.5rem;
             margin-bottom: 3rem;
             text-align: center;
             position: relative;
             padding-bottom: 1rem;
-        }
+        } */
 
         h2::after {
             content: '';
@@ -576,8 +608,8 @@
             <h1>Abhijith R</h1>
             <p class="subtitle">Computer Engineer | Open Source Enthusiast</p>
             <div class="btn-group">
-                <a href="mailto:gadha1998@gmail.com" class="btn btn-primary">Get in Touch</a>
-                <a href="#projects" class="btn btn-outline">View Projects</a>
+                <a href="mailto:gadha1998@gmail.com" class="btn btn-outline">Email Me</a>
+                <a href="CV.pdf" download class="btn btn-primary">Download CV (PDF)</a>
             </div>
             <div class="social-links">
                 <a href="https://github.com/Appoox" target="_blank" class="social-link">
